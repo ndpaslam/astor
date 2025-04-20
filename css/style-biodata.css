@@ -1,0 +1,183 @@
+/* Style Umum */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fdf6f9; /* calm white pinkish */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #c94f7c; /* pink premium */
+  text-align: center;
+  padding: 15px 0;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a.active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.navbar ul li a:hover {
+  color: #a34063; /* pink tua (hover/aksi) */
+}
+
+/* Hero Section */
+.hero {
+  background-color: #c94f7c; /* pink premium */
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero .content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero .content p {
+  font-size: 1.2em;
+}
+
+/* Biodata Section */
+.biodata {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.biodata h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #c94f7c; /* pink premium */
+}
+
+.profiles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.profile {
+  background-color: #fff0f5; /* soft pink */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: scale(1.05);
+}
+
+.profile img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.profile h3 {
+  font-size: 1.8em;
+  color: #c94f7c; /* pink premium */
+  margin-bottom: 10px;
+}
+
+.profile p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.profile p strong {
+  font-weight: bold;
+  color: #c94f7c; /* pink premium */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #c94f7c; /* pink premium */
+  color: white;
+  font-size: 1em;
+}
+
+/* Responsif Design */
+@media (max-width: 768px) {
+  .hero .content h1 {
+    font-size: 2.5em;
+  }
+  
+  .hero .content p {
+    font-size: 1.1em;
+  }
+
+  .navbar ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navbar ul li a {
+    font-size: 16px;
+  }
+
+  .biodata h2 {
+    font-size: 2em;
+  }
+
+  .profiles {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile {
+    width: 100%;
+  }
+
+  .profile img {
+    height: 350px;
+    width: min(23rem, 100%);
+    border-radius: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero .content h1 {
+    font-size: 2em;
+  }
+
+  .hero .content p {
+    font-size: 1em;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+}
