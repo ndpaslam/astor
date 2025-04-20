@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/biodata", "destination": "/biodata.html" },
+    { "source": "/memory", "destination": "/memory.html" },
+    { "source": "/sosmed", "destination": "/sosmed.html" }
+  ]
+}
