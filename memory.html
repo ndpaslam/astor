@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenangan Indah</title>
+  <link rel="stylesheet" href="css/style-memory.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biodata.html">Biodata</a></li>
+      <li><a href="memory.html" class="active">Memory</a></li>
+    </ul>
+  </nav>
+
+  <section class="kenangan-header">
+    <h1>Kenangan</h1>
+    <p>Semua Momen Yang Pernah Kita Lewati, Tersimpan Manis Di Sini.</p>
+    </section>
+    <section class="adip-ultah">
+      <h1>Adip Lahir</h1>
+    <p id="adiplahir"</p><p>ini tanggal 4 maret 2026</p>
+    </section>
+    <section class="tanggal-jadian">
+      <h1>Tanggal Balikan</h1>
+    <p id="tanggaljadian"</p><p>ini tanggal jadian kita</p>
+    </section>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("March 4, 2026 00:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("adiplahir").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("adiplahir").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+<script>
+// Tanggal awal (7 Februari 2025)
+var startDate = new Date("February 7, 2025 21:38:00").getTime();
+
+setInterval(function() {
+  var now = new Date().getTime();
+  var distance = now - startDate;
+
+  // Konversi ke satuan waktu
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Hitung bulan dan tahun kasar
+  var start = new Date(startDate);
+  var current = new Date(now);
+  var years = current.getFullYear() - start.getFullYear();
+  var months = current.getMonth() - start.getMonth();
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+
+  // Tampilkan hasil
+  document.getElementById("tanggaljadian").innerHTML =
+    years + " tahun " + months + " bulan " + days + " hari " + hours + " jam "
+    + minutes + " menit " + seconds + " detik berlalu";
+}, 1000);
+</script>
+  </section>
+
+  <section class="kenangan-galeri">
+    <div class="item">
+      <img src="image/firstmain2022.jpg" alt="kepo">
+      <p class="puisi">"Dalam senyummu, aku menemukan rumah."</p>
+      <p class="cerita">Waktu itu pertama kali main, ngobrolin hal random tapi hati rasanya tenang banget.</p>
+    </div>
+    <div class="item">
+      <img src="image/kehujanan2022.jpg" alt="kepo">
+      <p class="puisi">"Langit pun iri melihat kita, sedekat itu."</p>
+      <p class="cerita">Pas kita kehujanan bareng, inget ga? Malah ketawa-ketawa sambil lari nyari tempat teduh.</p>
+    </div>
+    <div class="item">
+      <img src="image/malming2023.jpg" alt="kepo">
+      <p class="puisi">"Malam itu tenang banget."</p>
+      <p class="cerita">Awal nya cuman mau main biasa, Eh tiba tiba ada angin apa..dan yang penting duduk bareng, walaupun ga banyak ngobrol.</p>
+    </div>
+    <!-- tambahin item lainnya di sini -->
+  </section>
+
+  <footer>
+    <p>&copy; 2022 Buat Kamu Yang Selalu Di Hati</p>
+  </footer>
+</body>
+</html>
